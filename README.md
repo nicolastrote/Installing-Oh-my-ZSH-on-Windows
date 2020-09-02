@@ -1,5 +1,5 @@
 # Installing OH-My-ZSH INSTALLATION
-![alt text](https://github.com/nicolastrote/Installing-Oh-my-ZSH-on-Windows/blob/master/ohmyzsh-demo.jpg)
+![alt text](https://github.com/nicolastrote/Installing-Oh-my-ZSH-on-Windows/blob/master/ohmyzsh-demo.png)
 
 Installation and template for my zsh:
  * cygwin
