@@ -1,4 +1,4 @@
-# Installing OH-My-ZSH & ZSH & Cygwin & Cmder INSTALLATION, CONFIGURATION AND THEME
+# Installing OH-My-ZSH INSTALLATION
 ![alt text](https://github.com/nicolastrote/MY-ZSH-CONFIG/blob/master/ntrote-zsh-color-awesome.png)
 
 Installation and template for my zsh:
@@ -33,10 +33,10 @@ We need to configurate in cigwin you're home folder
 * CTRL+X and YES for exit & saving your changes in nano
 
 ## CMDER POWERLINE FONT INSTALLATION
-In the repository https://github.com/powerline/fonts/ you can download and install several fonts. Personnaly I will go with UbuntuMono. 
-* CLic on each ttf file's links, and clic on the "Download" button
-* Double click on each files downloaded, it will launch Windows Font Tool
-* Click on install for each ttf files
+We will use meslo font which is one of the recommended font for Powerline Theme.
+* download at https://github.com/romkatv/powerlevel10k/blob/master/README.md#meslo-nerd-font-patched-for-powerlevel10k
+* click on the ttf file
+* Windows font tool should open and click Install button
 
 ## CMDER INSTALLATION
 CMDER is software package that provides great console experience.
@@ -47,7 +47,7 @@ CMDER is software package that provides great console experience.
 * Run cmder.exe
 * click on open Settings
   * General > Fonts > 
-    * Ubuntu Mono derivative Powerline
+    * MesloLGS NF
     * uncheck Alternative font
   * General > Size & Pos > Check Snap To desktop edges
   * General > Appearance > 
@@ -67,28 +67,65 @@ CMDER is software package that provides great console experience.
  * General > choose your startup... > choose in the dropdown selector {cygwin:ZSH}
  * Features > Colors > choose Monokai Scheme (default)
  * Keys & Macro > 
-`Win + Esc : Minimize/Restore
-Win + Down : Create New Console
-Win + T : Create new console (With Dialog)
-Win + N : Split: Duplicate active ‘shell’ split to bottom
-Win + Right : Switch Next Console
-Win + Left : Switch Previous Console
-Win + Q : Close active Console
-Win + E : Close all Consoles
-Win + Alt + P : Show Settings
-Win + Alt + Space : Show ConEmu Menu`
-
+   * Win + Esc : Minimize/Restore
+   * Win + Down : Create New Console
+   * Win + T : Create new console (With Dialog)
+   * Win + N : Split: Duplicate active ‘shell’ split to bottom
+   * Win + Right : Switch Next Console
+   * Win + Left : Switch Previous Console
+   * Win + Q : Close active Console
+   * Win + E : Close all Consoles
+   * Win + Alt + P : Show Settings
+   * Win + Alt + Space : Show ConEmu Menu
+ * Keys & Macro > Keyboard > check "Support Special hotkeys"
+ * Keys & Macro > Paste > Multi Lines is Checked
+ 
 ## Oh-my-zsh INSTALL
-Oh-My-Zsh is a delightful, open source, community-driven framework for managing your ZSH configuration.
+Oh-My-Zsh is a delightful, open , community-driven framework for managing your ZSH configuration.
 * ```cd Downloads```
 * ```git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh```
 * ```cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc```
 
 ## Oh-my-zsh SETUP
+* Right click on the window of your terminal (not the menu) > options
+* Change font-size and Apply the settings , a new .minttyrc file has beeen create
+* ```nano .minttyrc``` and paste
+BoldAsFont=no
+RightClickAction=paste
+Font=MesloLGS NF
+FontHeight=10
+Term=xterm-256color
+BoldAsColour=yes
+ConfirmExit=no
+Scrollbar=none
+Transparency=medium
+OpaqueWhenFocused=yes
+SelectionShowSize=1
+BackgroundColour=19,38,58
+ForegroundColour=228,228,228
+CursorColour=228,228,228
+Black=40,40,40
+BoldBlack=107,107,107
+Red=255,43,28
+BoldRed=243,91,80
+Green=2,192,97
+BoldGreen=0,253,127
+Yellow=251,188,46
+BoldYellow=253,197,86
+Blue=0,126,180
+BoldBlue=0,179,255
+Magenta=255,0,194
+BoldMagenta=239,133,214
+Cyan=87,208,249
+BoldCyan=141,219,245
+White=207,207,207
+BoldWhite=255,255,255
 
-
-
-
+## Oh-my-zsh THEME
+* install Powerlevel10k theme
+* cd Downloads
+* git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+* nano ~/.zshrc and change ZSH_THEME FOR: ZSH_THEME="powerlevel10k/powerlevel10k"
 
 
 
@@ -98,13 +135,7 @@ Oh-My-Zsh is a delightful, open source, community-driven framework for managing 
 
 
 ## INSTALLATION iTERM2
-Why iTerm2? Because you can split your iTerm windows vertically or horizontally to infinite!
-Download and install iTerm2 from https://iterm2.com/downloads/stable/iTerm2-3_1_6.zip
 
-Tell iTerm2 to use ZSH
- * go to iTerm2 preferences.
- * head to Profiles -> General.
- * paste /bin/zsh in the Command textbox and restart iTerm2.
 
 For color download : 
  * https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark%20-%20Patched.itermcolors
@@ -116,22 +147,6 @@ If you like my theme, you can download my color theme from the repository: [ntro
 For launch iterm2 with saved windows : 
 ![alt text](https://github.com/nicolastrote/MY-ZSH-CONFIG/blob/master/ntrote-iterm2.png)
 
-## LOCAL PATH
-  * uncomment the 2d ligne in .zshrc file to activate access to your local path
-```
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-```
-For React Native development you can add:
-```
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export NODE_TLS_REJECT_UNAUTHORIZED=0
-``` 
 ## INSTALLATION POWEERLINE10K FONT+ICONS
 And installation for a "powerline" style
 ```$ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k```
@@ -145,32 +160,11 @@ for configuring
 ```
 p10k configure
 ```
-
-## INSTALLATION POWERLINE FONTS
-source : https://github.com/gabrielelana/awesome-terminal-fonts/tree/patching-strategy/patched
-Those font are ready to go with font awesome icons!
- * download [SourceCodePro-Powerline-Awesome-Regular.ttf](https://github.com/nicolastrote/MY-ZSH-CONFIG/blob/master/SourceCodePro%2BPowerline%2BAwesome%2BRegular.ttf)
- * on mac just double-clic to install
- * in the .zshrc file add the POWERLEVEL9K_MODE parameter for activate font awesome icons.
-```
-$ nano ~/.zshrc
-  POWERLEVEL9K_MODE='awesome-patched'
-  ZSH_THEME="powerlevel9k/powerlevel9k"
-```
-And add in iTerm the font
- * Set this font in iTerm2 (iTerm → Preferences → Profiles → Text → Change Font), best to do this for "Font" and for "Non-ASCII Font".
- * Term → preferences → profiles > Police > modifed...
- * choose source-code-pro   13px
- 
-## ENABLE WORD JUMP & AUTOCOMPLETION
-By default, word jumps (option + → or ←) and word deletions (option + backspace) do not work. 
-To enable these, go to 
-  * iTerm → Preferences → Profiles → Keys → Load Preset... → Natural Text Editing
   
 ## AUTOSUGGESTION
 https://github.com/zsh-users/zsh-autosuggestions
 - `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
 - `nano ~/.zshrc`
-- add:
-`plugins=(zsh-autosuggestions)`
+- add in the plugins line:
+`plugins=(git zsh-autosuggestions)`
 - restart terminal
