@@ -126,37 +126,7 @@ BoldWhite=255,255,255
 * cd Downloads
 * git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 * nano ~/.zshrc and change ZSH_THEME FOR: ZSH_THEME="powerlevel10k/powerlevel10k"
-
-
-
-
-
-
-
-
-## INSTALLATION iTERM2
-
-
-For color download : 
- * https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Solarized%20Dark%20-%20Patched.itermcolors
- * https://raw.githubusercontent.com/altercation/solarized/master/iterm2-colors-solarized/Solarized%20Light.itermcolors
-Term → preferences → profiles → colors → load presets
-
-If you like my theme, you can download my color theme from the repository: [ntrote.itermcolors](https://github.com/nicolastrote/MY-ZSH-CONFIG/blob/master/ntrote.itermcolors)
-
-For launch iterm2 with saved windows : 
-![alt text](https://github.com/nicolastrote/MY-ZSH-CONFIG/blob/master/ntrote-iterm2.png)
-
-## INSTALLATION POWEERLINE10K FONT+ICONS
-And installation for a "powerline" style
-```$ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k```
-edit .zshrv config file and change the theme name : 
-```
-$ nano ~/.zshrc
-  ZSH_THEME="powerlevel10k/powerlevel10k"
-  POWERLEVEL9K_MODE="awesome-patched"
-```
-for configuring
+* for configuring
 ```
 p10k configure
 ```
