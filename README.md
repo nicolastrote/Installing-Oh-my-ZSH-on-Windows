@@ -1,5 +1,5 @@
 # Installing OH-My-ZSH INSTALLATION
-![alt text](https://github.com/nicolastrote/MY-ZSH-CONFIG/blob/master/ntrote-zsh-color-awesome.png)
+![alt text](https://github.com/nicolastrote/Installing-Oh-my-ZSH-on-Windows/blob/master/ohmyzsh-demo.png)
 
 Installation and template for my zsh:
  * cygwin
@@ -15,7 +15,8 @@ Cygwin is a large collection of GNU and Open Source tools which provide function
 * Download Cygwin : https://cygwin.com/install.html
 * Install at C:\cygwin64
   * At packages screen, search for wget
-  * Click on the arrow on the wget line and choose the latest version.
+  * Click on the arrow on the wget line and choose the latest version:
+  ![alt text](https://github.com/nicolastrote/Installing-Oh-my-ZSH-on-Windows/blob/master/cigwin-web.jpg)
   * Then Continue.
   
 ## APT-CYG INSTALLATION
